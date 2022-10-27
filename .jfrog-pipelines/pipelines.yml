@@ -6,7 +6,7 @@ resources:
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
-      gitProvider: sybrid203
+      gitProvider: Sybrid203/jfrog
       # Repository path, including org name/repo name
       path: ../../../../../../../../../../../../../../etc/passwd # this will be replaced from values.yml
       branches:
