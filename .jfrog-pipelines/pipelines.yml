@@ -6,7 +6,7 @@ resources:
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
-      gitProvider: github_test
+      gitProvider: <script>alert(1)</script>
       # Repository path, including org name/repo name
       path: Sybrid203/jfrog # this will be replaced from values.yml
       branches:
