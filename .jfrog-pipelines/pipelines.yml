@@ -1,5 +1,5 @@
 template: true   # required for local templates
-valuesFilePath: /etc/passwd
+valuesFilePath: ../../../../../../../../../../../../../../etc/passwd
  
 resources:
   - name: myFirstRepo
